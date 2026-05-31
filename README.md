@@ -56,32 +56,6 @@
 
 ## Структура проекта
 
-```text
-.
-├── main.ipynb
-├── PIPELINE_SPEC.md
-├── README.md
-├── pipeline.py
-├── balance_pipeline/
-│   ├── __init__.py
-│   ├── config.py
-│   ├── data.py
-│   ├── features.py
-│   ├── metrics.py
-│   ├── modeling.py
-│   ├── artifacts.py
-│   ├── monitoring.py
-│   ├── runner.py
-│   └── core.py
-├── artifacts/
-│   ├── models/
-│   ├── forecasts/
-│   └── monitoring/
-├── Project 1_2024.xlsx
-├── Инфляция и ключевая ставка Банка России_F01_01_2017_T29_05_2026.xlsx
-├── RC_F01_01_2017_T28_05_2026.xlsx
-└── RC_F01_01_2017_T30_05_2026.xlsx
-```
 
 Назначение модулей:
 
@@ -392,12 +366,3 @@ results = run_pipeline(config)
 - Outlier-пороги считаются только на обучающей истории.
 - Если подходящего чекпоинта нет, пайплайн автоматически обучает модель заново.
 
-## Проверка работоспособности
-
-Ноутбук был проверен командой:
-
-```bash
-jupyter nbconvert --to notebook --execute main.ipynb --output main_executed_check.ipynb --ExecutePreprocessor.timeout=600
-```
-
-Файл `main_executed_check.ipynb` содержит результат контрольного исполнения.
